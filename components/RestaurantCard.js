@@ -13,7 +13,7 @@ export default function RestaurantCard({ restaurant }) {
         router.push("/details") // navigating to details  page
     }
 
-    return (
+    return (   
 
         <Pressable onPress={showDetails}>
             <Box

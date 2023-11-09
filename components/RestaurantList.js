@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Text, View, ScrollView } from "react-native";
+import { ScrollView } from "react-native";
 import RestaurantCard from "./RestaurantCard";
 
 export default function RestaurantList(){
@@ -14,12 +14,12 @@ export default function RestaurantList(){
     }, [])
 
     return(
-        <View>
+       
         <ScrollView>
             {restaurants && restaurants.map(rest => (
                <RestaurantCard key={rest._id} restaurant={rest}/>
             ))}
         </ScrollView>
-        </View>
+        
     )
 }

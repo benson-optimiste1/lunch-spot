@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "expo-router";
 import { RestaurantContext } from "./_layout";
 import {  Heading, Text, Box, Image } from "@gluestack-ui/themed";
 
@@ -16,8 +17,9 @@ export default function Details() {
 
             <Heading size="4xl" >{thisRest.name}</Heading>
             <Text> {thisRest.address}</Text>
+            <Link href={thisRest.menu_url}>Menu</Link>
             <Text size="2xl"> {thisRest?.rating && '⭐️'.repeat(thisRest.rating)}</Text>
-            
+
         </Box>
     )
 }
